@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+
+  roles:
+    - osupdate
+    - geerlingguy.docker
+
+  tasks:
+    - name: adding current user to docker group
+      ansible.builtin.user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+      when: ansible_user is defined
