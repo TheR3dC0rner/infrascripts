@@ -22,8 +22,15 @@ spec:
       user: admin1
       port: 22
       keyPath: /home/$USER/.ssh/id_admin1
+    role: worker 
+  - ssh:
+      address: 192.168.201.41
+      user: admin1
+      port: 22
+      keyPath: /home/$USER/.ssh/id_admin1
     role: worker
  
+
   k0s:
     config:
       apiVersion: k0s.k0sproject.io/v1beta1
