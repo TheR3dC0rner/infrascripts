@@ -1,0 +1,10 @@
+[masters]
+dk0sm1 ansible_host=192.168.200.185
+[workers]
+dk0sw1 ansible_host=192.168.201.175
+dk0sw2 ansible_host=192.168.200.186
+dk0sw3 ansible_host=192.168.201.41
+
+[nodes:children]
+masters
+workers

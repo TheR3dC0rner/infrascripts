@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+
+  roles:
+    - osupdate
+
+- hosts: workers
+  become: true
+  tasks:  
+    - name: install neede packages for longhorn
+      ansible.builtin.apt:
+        pkg:
+        - open-iscsi
+        - nfs-common
