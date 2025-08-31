@@ -7,7 +7,7 @@
 - hosts: workers
   become: true
   tasks:  
-    - name: install neede packages for longhorn
+    - name: install needed packages for longhorn
       ansible.builtin.apt:
         pkg:
         - open-iscsi
